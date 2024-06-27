@@ -1,0 +1,21 @@
+/target
+# Rust
+/target
+**/*.rs.bk
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+*.tfplan
+*.tflint.hcl
+
+# env file
+.env
+
+# everything under uploads
+uploads/*
+
+.vscode/

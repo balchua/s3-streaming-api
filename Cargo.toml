@@ -1,0 +1,17 @@
+[package]
+name = "s3-streaming-api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { git = "https://github.com/tokio-rs/axum.git", features = [
+    "multipart",
+] }
+tokio = { version = "1.38.0", features = ["full"] }
+tokio-util = { version = "0.7.11", features = ["io-util"] }
+futures = "0.3.30"
+axum-extra = { version = "0.9.3", features = ["async-read-body"] }
+aws-sdk-s3 = { version = "1.38.0", features = ["rt-tokio"] }
+aws-config = { version = "1.1.7", features = ["behavior-version-latest"] }
+thiserror = "1.0.58"
+tower-http = { version = "0.5.0", features = ["limit", "trace"] }
